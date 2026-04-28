@@ -38,3 +38,13 @@ En Windows
 ```bash
 curl.exe -H "Host: " http://localhost:3000/ -X POST
 ```
+
+En el resultado de la petición vera un error como el siguiente:
+
+```html
+...
+<pre>Error: Invalid URI &quot;http:///cwe-209?api_key=88665751-288d-4175-852f-6519d79fdf1f&quot;<br>
+...
+```
+
+Si luego intenta visitar la ruta mostrada en el error, podra ver las "credenciales" de los usaurios; el mensaje de error ha revelado información sensible al atacante.
